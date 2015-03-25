@@ -1,0 +1,11 @@
+alias grep='grep --color'
+
+alias la='ls -al'
+alias ll='ls -lh'
+alias ls='ls -G'
+
+uname | grep Darwin &> /dev/null
+if (( $? == 0 )); then
+  alias mvim='COLORFGBG= mvim'
+fi
+
