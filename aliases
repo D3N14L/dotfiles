@@ -1,8 +1,8 @@
 alias grep='grep --color'
 
-alias la='ls -al'
-alias ll='ls -lh'
-alias ls='ls -G'
+alias la='ls -al --color'
+alias ll='ls -lh --color'
+alias ls='ls -G --color'
 
 uname | grep Darwin &> /dev/null
 if (( $? == 0 )); then
