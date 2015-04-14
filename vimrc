@@ -18,18 +18,13 @@ set visualbell
 set ttyfast
 set backspace=indent,eol,start
 set laststatus=2
-"set relativenumber
+set relativenumber
 set number
 "set undofile
 
 set incsearch
 set showmatch
 set hlsearch
-
-highlight OverLength ctermbg=darkred ctermfg=white guibg=#FFD9D9
-"match OverLength /\%81v.*/
-match OverLength /\%81v\|\%121v/
-set guifont=Meslo\ LG\ L\ DZ:h12
 
 set tw=0
 set tabstop=2 softtabstop=2 shiftwidth=2

@@ -1,11 +1,13 @@
 alias grep='grep --color'
 
-alias la='ls -al --color'
-alias ll='ls -lh --color'
-alias ls='ls -G --color'
+alias la='ls -laG'
+alias ll='ls -lahG'
+alias ls='ls -G'
 
 uname | grep Darwin &> /dev/null
 if (( $? == 0 )); then
   alias mvim='COLORFGBG= mvim'
 fi
+
+alias assemble_ssh_config='cat ~/.ssh/config.d/config ~/.ssh/config.d/*.conf > ~/.ssh/config'
 
