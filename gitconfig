@@ -1,0 +1,19 @@
+# This is Git's per-user configuration file.
+[core]
+# Please adapt and uncomment the following lines:
+user = D3N14L 
+email = daniel.marks@codecentric.de
+	excludesfile = /Users/dnl/.gitignore_global
+[push]
+	default = simple
+[user]
+	name = Daniel Marks
+	email = daniel.marks@codecentric.de
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[alias]
+	tree = log --graph --decorate --pretty=oneline --abbrev-commit
