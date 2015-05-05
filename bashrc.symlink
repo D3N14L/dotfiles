@@ -25,3 +25,7 @@ fi
 
 # Source aliases
 . ~/.aliases
+
+if [ -f ~/.bashrc.override ]; then
+    . ~/.bashrc.override
+fi

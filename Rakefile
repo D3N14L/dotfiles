@@ -3,7 +3,9 @@
 require 'rake'
 
 vim_bundles = [
-	['https://github.com/chase/vim-ansible-yaml', 'vim-ansible-yaml']
+	['https://github.com/chase/vim-ansible-yaml', 'vim-ansible-yaml'],
+	['https://github.com/tpope/vim-markdown','vim-markdown'],
+	['https://github.com/rizzatti/dash.vim.git','vim-dash']
 ]
 
 task :default => ['create_symlinks', 'install_pathogen_vim', 'install_liquid_prompt']
