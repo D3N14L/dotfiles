@@ -1,5 +1,4 @@
-" .vimrc
-execute pathogen#infect()
+" .vimrc.after
 syntax on
 filetype plugin indent on
 
