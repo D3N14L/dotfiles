@@ -71,3 +71,10 @@ vmap <expr>  ++  VMATH_YankAndAnalyse()
 "vmap  <expr>  K          DVB_Drag('up')
 "vmap  <expr>  D          DVB_Duplicate()
 
+map  <leader>T :NERDTreeToggle<CR>
+omap <leader>T :NERDTreeToggle<CR>
+map  <leader>t :NERDTreeFocus<CR>
+omap <leader>t :NERDTreeFocus<CR>
+map  <leader>b :BuffergatorToggle<CR>
+omap <leader>b :BuffergatorToggle<CR>
+

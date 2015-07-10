@@ -29,3 +29,5 @@ fi
 if [ -f ~/.bashrc.override ]; then
     . ~/.bashrc.override
 fi
+
+export EDITOR='vim'
