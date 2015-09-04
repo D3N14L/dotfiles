@@ -12,11 +12,12 @@ end
 task :create_symlinks do
 	symlinks = Dir.glob("#{Dir.pwd}/*.symlink")
 	symlinks.each do |symlink|
-		FileUtils.ln_sf(symlink, "#{Dir.home}/.#{File.basename(symlink).sub('.symlink', '')}" )
+		FileUtils.ln_sf(symlink, "#{Dir.home}/.#{File.basename(symlink).sub('.symlink', '')}" ) unless File.exist?("#{Dir.home}/.#{File.basename(symlink).sub('.symlink', '')}")
 	end
 end
 
 task :install_janus_vim do
+        sh "rm -rf ~/.vim.old"
 	sh "cd ~; curl -Lo- https://bit.ly/janus-bootstrap | bash"
 end
 
