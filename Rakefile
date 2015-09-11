@@ -17,8 +17,8 @@ task :create_symlinks do
 end
 
 task :install_janus_vim do
-        sh "rm -rf ~/.vim.old"
-	sh "cd ~; curl -Lo- https://bit.ly/janus-bootstrap | bash"
+  sh "rm -rf ~/.vim.old"
+	sh "cd ~; curl -Lo- https://raw.github.com/carlhuda/janus/master/bootstrap.sh | bash"
 end
 
 task :install_liquid_prompt do
