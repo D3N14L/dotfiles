@@ -17,7 +17,9 @@ set visualbell
 set ttyfast
 set backspace=indent,eol,start
 set laststatus=2
-set relativenumber
+if version >= 703
+  set relativenumber
+endif
 set number
 "set undofile
 
