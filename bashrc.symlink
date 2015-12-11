@@ -30,6 +30,59 @@ if [ -f ~/.bashrc.override ]; then
     . ~/.bashrc.override
 fi
 
+function osenv_tenant {
+  if [ "$#" -eq 1 ];
+  then
+    export OS_TENANT_NAME="$1"
+  fi
+  if [ "$#" -le 1 ];
+  then
+    echo $OS_TENANT_NAME;
+  else
+    return 1
+  fi
+  return 0
+}
+function osenv_username {
+  if [ "$#" -eq 1 ];
+  then
+    export OS_USERNAME="$1"
+  fi
+  if [ "$#" -le 1 ];
+  then
+    echo $OS_USERNAME;
+  else
+    return 1
+  fi
+  return 0
+}
+function osenv_password {
+  if [ "$#" -eq 1 ];
+  then
+    export OS_PASSWORD="$1"
+  fi
+  if [ "$#" -le 1 ];
+  then
+    echo $OS_PASSWORD;
+  else
+    return 1
+  fi
+  return 0
+}
+function osenv_auth_url {
+  if [ "$#" -eq 1 ];
+  then
+    export OS_AUTH_URL="$1"
+  fi
+  if [ "$#" -le 1 ];
+  then
+    echo $OS_AUTH_URL;
+  else
+    return 1
+  fi
+  return 0
+}
+
 export EDITOR='vim'
 export LC_CTYPE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
