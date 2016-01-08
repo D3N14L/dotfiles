@@ -34,8 +34,6 @@ set wrap linebreak list
 
 autocmd Filetype markdown setlocal wrap linebreak nolist
 
-" Map leader to ','
-let mapleader = ","
 " mark pasted text
 noremap <leader>v V`]
 " set highlight off
