@@ -17,8 +17,12 @@ task :create_symlinks do
 end
 
 task :install_janus_vim do
-  sh "rm -rf ~/.vim.old"
-	sh "cd ~; curl -Lo- https://raw.github.com/carlhuda/janus/master/bootstrap.sh | bash"
+  if File.exists?("#{Dir.home}/.vim") then
+    sh "cd #{Dir.home}/.vim/; rake"
+  else
+    sh "rm -rf ~/.vim.old"
+    sh "cd ~; curl -Lo- https://raw.github.com/carlhuda/janus/master/bootstrap.sh | bash"
+  end
 end
 
 task :install_liquid_prompt do

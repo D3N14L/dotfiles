@@ -1,4 +1,4 @@
-alias grr='grep --color'
+alias grep='grep --color'
 
 if [[ "$OSTYPE" = darwin* ]]; then
   export EDITOR='mvim'

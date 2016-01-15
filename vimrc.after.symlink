@@ -78,4 +78,4 @@ omap <leader>t :NERDTreeFocus<CR>
 map  <leader>b :BuffergatorToggle<CR>
 omap <leader>b :BuffergatorToggle<CR>
 
-colorscheme molokai
+"color molokai
