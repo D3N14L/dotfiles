@@ -21,7 +21,7 @@ task :install_janus_vim do
     sh "cd #{Dir.home}/.vim/; rake"
   else
     sh "rm -rf ~/.vim.old"
-    sh "cd ~; curl -Lo- https://raw.github.com/carlhuda/janus/master/bootstrap.sh | bash"
+    sh "cd ~; curl -L https://bit.ly/janus-bootstrap | bash"
   end
 end
 
