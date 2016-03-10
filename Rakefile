@@ -12,7 +12,11 @@ end
 task :create_symlinks do
 	symlinks = Dir.glob("#{Dir.pwd}/*.symlink")
 	symlinks.each do |symlink|
-		FileUtils.ln_sf(symlink, "#{Dir.home}/.#{File.basename(symlink).sub('.symlink', '')}" ) unless File.exist?("#{Dir.home}/.#{File.basename(symlink).sub('.symlink', '')}")
+    dest_filename = "#{Dir.home}/.#{File.basename(symlink).sub('.symlink', '')}"
+    if File.exist?(dest_filename) then
+      FileUtils.mv(dest_filename, "#{dest_filename}.old")
+    end
+		FileUtils.ln_sf(symlink, "#{Dir.home}/.#{File.basename(symlink).sub('.symlink', '')}" )
 	end
 end
 
