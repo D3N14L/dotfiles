@@ -22,7 +22,7 @@ end
 
 task :install_janus_vim do
   if File.exists?("#{Dir.home}/.vim") then
-    sh "cd #{Dir.home}/.vim/; rake"
+    sh "cd #{Dir.home}/.vim/; rake update"
   else
     sh "rm -rf ~/.vim.old"
     sh "cd ~; curl -L https://bit.ly/janus-bootstrap | bash"
