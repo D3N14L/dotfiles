@@ -78,4 +78,6 @@ omap <leader>t :NERDTreeFocus<CR>
 map  <leader>b :BuffergatorToggle<CR>
 omap <leader>b :BuffergatorToggle<CR>
 
-"color molokai
+" See http://vimcolors.com but not all are installed
+color molokai
+set cursorline
