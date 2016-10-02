@@ -2,6 +2,10 @@
 
 require 'rake'
 
+additional_vim_plugins = {
+  "ansible-vim" => "https://github.com/pearofducks/ansible-vim"
+}
+
 task :default => ['create_symlinks', 'install_janus_vim', 'install_liquid_prompt']
 
 def create_directory (dir)
@@ -26,6 +30,16 @@ task :install_janus_vim do
   else
     sh "rm -rf ~/.vim.old"
     sh "cd ~; curl -L https://bit.ly/janus-bootstrap | bash"
+  end
+
+  # addional vim plugins via janus
+  sh "mkdir #{Dir.home}/janus" if not File.exist?("#{Dir.home}/.janus")
+  additional_vim_plugins.each do |name,url|
+    if not File.exist?("#{Dir.home}/.janus/#{name}")
+      sh "cd #{Dir.home}/.janus/; git clone #{url}"
+    else
+      sh "cd #{Dir.home}/.janus/#{name}; git pull"
+    end
   end
 end
 
