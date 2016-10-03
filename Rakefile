@@ -3,7 +3,8 @@
 require 'rake'
 
 additional_vim_plugins = {
-  "ansible-vim" => "https://github.com/pearofducks/ansible-vim"
+  "ansible-vim" => "https://github.com/pearofducks/ansible-vim",
+  "AutoClose" => "https://github.com/vim-scripts/AutoClose"
 }
 
 task :default => ['create_symlinks', 'install_janus_vim', 'install_liquid_prompt']
