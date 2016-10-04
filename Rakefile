@@ -5,7 +5,7 @@ require 'rake'
 additional_vim_plugins = {
   "ansible-vim" => "https://github.com/pearofducks/ansible-vim",
   "AutoClose" => "https://github.com/vim-scripts/AutoClose",
-  "nerdtree-git-plugin" => "https://github.com/Xuyuanp/nerdtree-git-plugin"
+  "nerdtree-git-plugin" => "https://github.com/Xuyuanp/nerdtree-git-plugin",
   "vim-airline" => "git clone https://github.com/bling/vim-airline"
 }
 
