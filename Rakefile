@@ -6,7 +6,7 @@ additional_vim_plugins = {
   "ansible-vim" => "https://github.com/pearofducks/ansible-vim",
   "AutoClose" => "https://github.com/vim-scripts/AutoClose",
   "nerdtree-git-plugin" => "https://github.com/Xuyuanp/nerdtree-git-plugin",
-  "vim-airline" => "git clone https://github.com/bling/vim-airline"
+  "vim-airline" => "https://github.com/bling/vim-airline"
 }
 
 task :default => ['create_symlinks', 'install_janus_vim', 'install_liquid_prompt']
