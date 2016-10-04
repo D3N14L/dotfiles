@@ -36,12 +36,12 @@ task :install_janus_vim do
   end
 
   # addional vim plugins via janus
-  sh "mkdir #{Dir.home}/janus" if not File.exist?("#{Dir.home}/.janus")
+  sh "mkdir #{Dir.home}/.janus" if not File.exist?("#{Dir.home}/.janus")
   additional_vim_plugins.each do |name,url|
     if not File.exist?("#{Dir.home}/.janus/#{name}")
-      sh "cd #{Dir.home}/.janus/; git clone #{url}"
+      sh "cd #{Dir.home}/.janus/ && git clone #{url}"
     else
-      sh "cd #{Dir.home}/.janus/#{name}; git pull"
+      sh "cd #{Dir.home}/.janus/#{name} && git pull"
     end
   end
 end
