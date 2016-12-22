@@ -140,3 +140,6 @@ function osenv_auth_url {
   return 0
 }
 
+if [ -f /usr/share/autojump/autojump.sh ]; then
+  . /usr/share/autojump/autojump.sh
+fi
