@@ -79,5 +79,5 @@ map  <leader>b :BuffergatorToggle<CR>
 omap <leader>b :BuffergatorToggle<CR>
 
 " See http://vimcolors.com but not all are installed
-color molokai
+color srcery
 set cursorline
