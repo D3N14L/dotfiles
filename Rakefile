@@ -7,7 +7,8 @@ additional_vim_plugins = {
   "AutoClose" => "https://github.com/vim-scripts/AutoClose",
   "nerdtree-git-plugin" => "https://github.com/Xuyuanp/nerdtree-git-plugin",
   "vim-airline" => "https://github.com/bling/vim-airline",
-  "vim-srcery" => "https://github.com/roosta/vim-srcery"
+  "vim-srcery" => "https://github.com/roosta/vim-srcery",
+  "gnupg.vim" => "https://github.com/vim-scripts/gnupg.vim"
 }
 
 task :default => ['create_symlinks', 'install_janus_vim', 'install_liquid_prompt']
