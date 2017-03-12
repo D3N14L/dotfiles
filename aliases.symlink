@@ -20,5 +20,5 @@ if (( $? == 0 )); then
   alias mvim='COLORFGBG= mvim'
 fi
 
-alias assemble_ssh_config='cat ~/.ssh/config.d/config ~/.ssh/config.d/*.conf > ~/.ssh/config'
+alias assemble_ssh_config='cat ~/.ssh/config.d/*.conf > ~/.ssh/config'
 
