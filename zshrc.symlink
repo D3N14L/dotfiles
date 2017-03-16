@@ -111,3 +111,4 @@ export KEYTIMEOUT=1
 
 source ~/.aliases
 
+export EDITOR=vim

@@ -2,13 +2,11 @@ alias grep='grep --color'
 alias os='openstack'
 
 if [[ "$OSTYPE" = darwin* ]]; then
-  export EDITOR='mvim'
   alias ls='ls -G'
   alias ll='ls -alFG'
   alias la='ls -AG'
   alias l='ls -CFG'
 else
-  export EDITOR='vim'
   alias ls='ls --color=auto'
   alias ll='ls -alF --color=auto'
   alias la='ls -A --color=auto'
