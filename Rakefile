@@ -11,11 +11,12 @@ additional_vim_plugins = {
   "gnupg.vim" => "https://github.com/vim-scripts/gnupg.vim"
 }
 
+vim_dirs = ["#{Dir.home}/.vim/backup/", "#{Dir.home}/.vim/swap", "#{Dir.home}/.vim/undo"]
+
 task :default => ['create_symlinks', 'install_janus_vim', 'install_liquid_prompt']
 
 def create_directory (dir)
-	dir_to_create=File.join(Dir.home, dir)
-	Dir.mkdir(dir_to_create,0700) unless File.exist?(dir_to_create)
+	Dir.mkdir(dir,0700) unless File.exist?(dir)
 end
 
 task :create_symlinks do
@@ -35,6 +36,10 @@ task :install_janus_vim do
   else
     sh "rm -rf ~/.vim.old"
     sh "cd ~; curl -L https://bit.ly/janus-bootstrap | bash"
+  end
+
+  vim_dirs.each do |vim_dir|
+    create_directory(vim_dir)
   end
 
   # addional vim plugins via janus
