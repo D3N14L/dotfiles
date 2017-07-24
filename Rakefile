@@ -8,6 +8,7 @@ additional_vim_plugins = {
   "vim-airline" => "https://github.com/bling/vim-airline",
   "vim-srcery" => "https://github.com/roosta/vim-srcery",
   "gnupg.vim" => "https://github.com/vim-scripts/gnupg.vim"
+  "jedi-vim" => "https://github.com/davidhalter/jedi-vim.git"
 }
 
 vim_dirs = ["#{Dir.home}/.vim/backup/", "#{Dir.home}/.vim/swap", "#{Dir.home}/.vim/undo"]
