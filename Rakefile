@@ -7,7 +7,7 @@ additional_vim_plugins = {
   "nerdtree-git-plugin" => "https://github.com/Xuyuanp/nerdtree-git-plugin",
   "vim-airline" => "https://github.com/bling/vim-airline",
   "vim-srcery" => "https://github.com/roosta/vim-srcery",
-  "gnupg.vim" => "https://github.com/vim-scripts/gnupg.vim"
+  "gnupg.vim" => "https://github.com/vim-scripts/gnupg.vim",
   "jedi-vim" => "https://github.com/davidhalter/jedi-vim.git"
 }
 
