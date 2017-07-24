@@ -1,0 +1,77 @@
+# Tmux config wiki:
+# https://wiki.archlinux.org/index.php/Tmux
+
+set  -g default-terminal "screen"
+set  -g base-index      0
+setw -g pane-base-index 0
+
+set  -s escape-time       500
+
+# X
+set -ga terminal-override ',rxvt-uni*:XT:Ms=\E]52;%p1%s;%p2%s\007'
+set -g default-terminal "screen-256color"
+set -g mouse on
+
+# No destruction with still existing session
+set -g detach-on-destroy off
+
+# History
+set -g history-limit 10000
+
+# Vim style
+setw -g mode-keys vi
+
+# Aggresive Ressizing
+setw -g aggressive-resize on
+
+# Indexing
+set -g base-index 1
+
+# Titles
+setw -g automatic-rename on
+set -g set-titles on
+set -g set-titles-string "#T"
+
+# Colors
+set -g pane-active-border-fg colour4
+set -g status-fg colour5
+set -g status-bg colour0
+setw -g window-status-fg colour5
+setw -g window-status-current-fg colour6
+setw -g window-status-bg colour0
+
+## Statusbar Content
+set -g status-left-length 70
+set -g status-left "  #(tmux ls | awk '{gsub(/:$/,\"\",$1); if (\"#{client_session}\"==$1) printf \"#[fg=cyan]%%s* \", $1; else if (\"#{client_last_session}\"==$1) printf \"#[fg=magenta]%%s- \", $1; else printf \"#[fg=magenta]%%s \", $1;}')"
+set -g status-justify right
+set -g status-right " "
+
+# Set window notifications
+setw -g monitor-activity on
+set -g visual-activity on
+
+# Keybindings
+
+bind h command-prompt -p "man" "split-window -h 'exec man %%'"
+bind j command-prompt -p "send pane to"  "join-pane -t '%%'"
+bind C-j command-prompt -p "join pane from"  "join-pane -s '%%'"
+
+bind r source-file ~/.tmuxrc
+
+## Navigation
+bind -n S-left prev
+bind -n S-right next
+bind -n S-up switch -p
+bind -n S-down switch -n
+bind s command-prompt -p "select session" "switch -t '%%'"
+bind l last-window
+bind C-l switch -l
+
+bind -n C-left swap-window -t -1
+bind -n C-right swap-window -t +1
+
+#bind t run "tmux new -D -d -s taskwarrior; tmux switch -t taskwarrior"
+#bind m run "tmux new -D -d -s messanger; tmux switch -t messanger"
+#bind n run "tmux new -D -d -s audio; tmux switch -t audio"
+bind C-c command-prompt -p "create new session" "new -D -d -s '%%'"
+
