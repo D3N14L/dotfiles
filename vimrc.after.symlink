@@ -2,8 +2,6 @@
 syntax on
 filetype plugin indent on
 
-set background=dark
-
 set nocompatible
 set encoding=utf-8
 set scrolloff=3
@@ -79,8 +77,11 @@ map  <leader>b :BuffergatorToggle<CR>
 omap <leader>b :BuffergatorToggle<CR>
 
 " See http://vimcolors.com but not all are installed
-color srcery
+color solarized
+set termguicolors
 set cursorline
+
+set background=dark
 
 let g:GPGDebugLog="gpg.vim.log"
 let g:GPGDebugLevel=5
