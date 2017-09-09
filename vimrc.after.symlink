@@ -75,9 +75,21 @@ map  <leader>t :NERDTreeFocus<CR>
 omap <leader>t :NERDTreeFocus<CR>
 map  <leader>b :BuffergatorToggle<CR>
 omap <leader>b :BuffergatorToggle<CR>
+map  <leader>p :CtrlP<CR>
+omap <leader>p :CtrlP<CR>
+map  <leader>pb :CtrlPBuffer<CR>
+omap <leader>pb :CtrlPBuffer<CR>
+map  <leader>pm :CtrlPMixed<CR>
+omap <leader>pm :CtrlPMixed<CR>
+
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
 
 " See http://vimcolors.com but not all are installed
 color solarized
+
 set termguicolors
 set cursorline
 
