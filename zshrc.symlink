@@ -112,3 +112,5 @@ export KEYTIMEOUT=1
 source ~/.aliases
 
 export EDITOR=vim
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
