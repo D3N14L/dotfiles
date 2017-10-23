@@ -1,8 +1,5 @@
-# Make your self a home 
+# Make your self at home 
 
 ```
-git clone https://github.com/D3N14L/dotfiles ~/.dotfiles
-cd ~/.dotfile
-rake
 ```
 

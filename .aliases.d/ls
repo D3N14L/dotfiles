@@ -1,6 +1,3 @@
-alias grep='grep --color'
-alias os='openstack'
-
 if [[ "$OSTYPE" = darwin* ]]; then
   alias ls='ls -G'
   alias ll='ls -alFG'
@@ -12,11 +9,3 @@ else
   alias la='ls -A --color=auto'
   alias l='ls -CF --color=auto'
 fi
-
-uname | grep Darwin &> /dev/null
-if (( $? == 0 )); then
-  alias mvim='COLORFGBG= mvim'
-fi
-
-alias assemble_ssh_config='cat ~/.ssh/config.d/*.conf > ~/.ssh/config'
-
