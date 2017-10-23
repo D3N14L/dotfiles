@@ -18,7 +18,7 @@ antigen bundle zsh-users/zsh-autosuggestions
 
 # clone repo
 if [ ! -d $HOME/.dotfiles ] ; then
-  git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME clone https://github.com/d3n14l/dotfiles
+  git --git-dir=$HOME/.dotfiles/ clone --bare https://github.com/d3n14l/dotfiles
   git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME config --local status.showUntrackedFiles no
 else
   git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME pull
