@@ -1,6 +1,7 @@
 call plug#begin('~/.vim/plugged')
 Plug 'pearofducks/ansible-vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'valloric/youcompleteme'
 Plug 'lifepillar/vim-solarized8'
 Plug 'vim-scripts/gnupg.vim'
 Plug 'davidhalter/jedi-vim'
