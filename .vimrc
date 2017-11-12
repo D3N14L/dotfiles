@@ -18,6 +18,7 @@ syntax on
 filetype plugin indent on
 
 color gruvbox
+let g:gruvbox_contrast_dark="hard"
 
 set encoding=utf-8
 set scrolloff=3
