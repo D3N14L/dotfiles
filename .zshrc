@@ -9,6 +9,11 @@ do
   antigen bundle $plugin
 done
 
+LANGUAGE="en_US:en"
+LC_ALL="en_US"
+LC_CTYPE="UTF-8"
+LANG="en_US.UTF-8"
+
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle changyuheng/fz
