@@ -9,10 +9,11 @@ do
   antigen bundle $plugin
 done
 
-LANGUAGE="en_US:en"
-LC_ALL="en_US"
-LC_CTYPE="UTF-8"
-LANG="en_US.UTF-8"
+export LC_ALL="en_US.UTF-8"
+export LC_CTYPE="en_US.UTF-8"
+export LANGUAGE="en_US.UTF-8"
+export LANG="en_US.UTF-8"
+export LC_MESSAGES="en_US.UTF-8"
 
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-syntax-highlighting
@@ -22,7 +23,8 @@ antigen bundle changyuheng/fz
 #antigen theme frisk
 #antigen theme bira
 #antigen theme jtriley
-antigen theme ys
+#antigen theme ys
+antigen theme blinks
 antigen apply
 
 export EDITOR=vim
