@@ -17,7 +17,6 @@ source ~/.zshrc
 for d in backup swap undo; do
   [ ! -z $d ] && mkdir -p $HOME/.vim/$d
 done
-
 # setup vim plugins
 [ ! -f $HOME/.vim/autoload/plug.vim ] && curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-vim -Nuc ":PlugInstall|PlugStatus|PlugUpgrade|PlugUpdate|q|q"
+vim -u <(sed '/color/d' $HOME/.vimrc) -c ":PlugInstall|PlugStatus|PlugUpgrade|PlugUpdate|q|q"
