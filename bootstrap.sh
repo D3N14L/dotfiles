@@ -4,7 +4,7 @@
 
 # clone repo
 if [ ! -d $HOME/.dotfiles ] ; then
-  git clone --bare https://github.com/d3n14l/dotfiles .dotfiles
+  git clone --bare https://github.com/d3n14l/dotfiles $HOME/.dotfiles
   git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME config --local status.showUntrackedFiles no
 else
   git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME pull
