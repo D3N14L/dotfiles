@@ -23,6 +23,7 @@ filetype plugin indent on
 color gruvbox
 let g:gruvbox_contrast_dark="hard"
 
+set nocompatible
 set encoding=utf-8
 set scrolloff=3
 set autoindent
