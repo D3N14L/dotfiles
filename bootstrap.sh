@@ -20,4 +20,4 @@ done
 
 # setup vim plugins
 [ ! -f $HOME/.vim/autoload/plug.vim ] && curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-vim -c ":color default|:PlugStatus|PlugUpgrade|PlugInstall|PlugUpdate|q|q"
+vim -c ":PlugStatus|PlugUpgrade|PlugInstall|PlugUpdate|q|q"
