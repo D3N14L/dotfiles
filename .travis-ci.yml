@@ -1,0 +1,10 @@
+language: sh
+
+addons:
+  apt:
+    packages:
+      - build-essential
+      - zsh
+
+script:
+  - zsh bootstrap.sh
