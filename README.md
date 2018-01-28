@@ -3,5 +3,6 @@
 # Make your self at home 
 
 ```
+curl https://raw.githubusercontent.com/D3N14L/dotfiles/master/bootstrap.sh | /usr/bin/env zsh
 ```
 
