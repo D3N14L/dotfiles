@@ -9,6 +9,7 @@ if [ ! -d $HOME/.dotfiles ] ; then
 else
   git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME pull
 fi
+[ ! -f $HOME/.zshrc ] && mv $HOME/.zshrc $HOME/.zshrc.old
 git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME checkout master
 source ~/.zshrc
 
