@@ -10,13 +10,11 @@ Plug 'majutsushi/tagbar'
 Plug 'tpope/vim-fugitive'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'rking/ag.vim'
-Plug 'morhetz/gruvbox'
 Plug 'honza/vim-snippets'
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
 Plug 'garbas/vim-snipmate'
 Plug 'ervandew/supertab'
-
 call plug#end()
 
 syntax on
@@ -25,6 +23,7 @@ filetype plugin indent on
 color gruvbox
 let g:gruvbox_contrast_dark="hard"
 
+set nocompatible
 set encoding=utf-8
 set scrolloff=3
 set autoindent
@@ -61,13 +60,7 @@ set undodir=~/.vim/undo/
 let g:GPGDebugLog="gpg.vim.log"
 let g:GPGDebugLevel=5
 let g:GPGDefaultRecipients=["daniel.marks@mailbox.org"]
-let g:tagbar_type_ansible = {
-    \ 'ctagstype' : 'ansible',
-    \ 'kinds' : [
-        \ 't:tasks'
-    \ ],
-    \ 'sort' : 0
-    \ }
+"let g:tagbar_type_ansible = {'ctagstype' : 'ansible', 'kinds' : ['t:tasks'], 'sort' : 0}
 
 let mapleader = ","
 
