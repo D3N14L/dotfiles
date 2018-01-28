@@ -10,13 +10,12 @@ Plug 'majutsushi/tagbar'
 Plug 'tpope/vim-fugitive'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'rking/ag.vim'
-Plug 'morhetz/gruvbox'
+Plug 'morhetz/gruvbox', { 'dir': '~/.vim/colors/'}
 Plug 'honza/vim-snippets'
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
 Plug 'garbas/vim-snipmate'
 Plug 'ervandew/supertab'
-
 call plug#end()
 
 syntax on
