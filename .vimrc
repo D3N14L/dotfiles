@@ -60,7 +60,7 @@ set undodir=~/.vim/undo/
 let g:GPGDebugLog="gpg.vim.log"
 let g:GPGDebugLevel=5
 let g:GPGDefaultRecipients=["daniel.marks@mailbox.org"]
-let g:tagbar_type_ansible = {'ctagstype' : 'ansible', 'kinds' : ['t:tasks'], 'sort' : 0}
+"let g:tagbar_type_ansible = {'ctagstype' : 'ansible', 'kinds' : ['t:tasks'], 'sort' : 0}
 
 let mapleader = ","
 
