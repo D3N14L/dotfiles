@@ -1,7 +1,6 @@
 call plug#begin('~/.vim/plugged')
 Plug 'pearofducks/ansible-vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-" Plug 'valloric/youcompleteme'
 Plug 'vim-scripts/gnupg.vim'
 Plug 'davidhalter/jedi-vim'
 Plug 'cz8s/password-store'
@@ -12,6 +11,12 @@ Plug 'tpope/vim-fugitive'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'rking/ag.vim'
 Plug 'morhetz/gruvbox'
+Plug 'honza/vim-snippets'
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'tomtom/tlib_vim'
+Plug 'garbas/vim-snipmate'
+Plug 'ervandew/supertab'
+
 call plug#end()
 
 syntax on
