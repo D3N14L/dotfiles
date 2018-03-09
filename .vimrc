@@ -15,6 +15,7 @@ Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
 Plug 'garbas/vim-snipmate'
 Plug 'ervandew/supertab'
+Plug 'morhetz/gruvbox'
 call plug#end()
 
 syntax on
