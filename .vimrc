@@ -1,5 +1,5 @@
 call plug#begin('~/.vim/plugged')
-Plug 'pearofducks/ansible-vim'
+Plug 'pearofducks/ansible-vim', { 'do': 'cd ./UltiSnips; python2 generate.py' }
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'vim-scripts/gnupg.vim'
 Plug 'davidhalter/jedi-vim'
@@ -64,6 +64,12 @@ let g:GPGDefaultRecipients=["daniel.marks@mailbox.org"]
 "let g:tagbar_type_ansible = {'ctagstype' : 'ansible', 'kinds' : ['t:tasks'], 'sort' : 0}
 
 let mapleader = ","
+
+" ansible-vim settings
+let g:ansible_name_highlight = 'd'
+let g:ansible_extra_keywords_highlight = 1
+let g:ansible_normal_keywords_highlight = 'Statement'
+let g:ansible_with_keywords_highlight = 'Special'
 
 nnoremap <Leader>f :FZF<CR>
 nnoremap <Leader><left> <C-W><C-H>
