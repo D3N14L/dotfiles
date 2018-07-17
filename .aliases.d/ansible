@@ -1,0 +1,1 @@
+alias ansible-mitogen="ANSIBLE_STRATEGY_PLUGINS=~/workspace/mitogen/ansible_mitogen/plugins/strategy ANSIBLE_STRATEGY=mitogen_linear ansible-playbook"
