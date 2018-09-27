@@ -1,22 +1,23 @@
 call plug#begin('~/.vim/plugged')
-Plug 'pearofducks/ansible-vim', { 'do': 'cd ./UltiSnips; python2 generate.py' }
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'vim-scripts/gnupg.vim'
-Plug 'davidhalter/jedi-vim'
-Plug 'cz8s/password-store'
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'airblade/vim-gitgutter'
 Plug 'bling/vim-airline'
+Plug 'cz8s/password-store'
+Plug 'davidhalter/jedi-vim'
+Plug 'ervandew/supertab'
+Plug 'garbas/vim-snipmate'
+Plug 'honza/vim-snippets'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'kien/ctrlp.vim'
 Plug 'majutsushi/tagbar'
-Plug 'tpope/vim-fugitive'
-Plug 'airblade/vim-gitgutter'
-Plug 'ntpeters/vim-better-whitespace'
-Plug 'rking/ag.vim'
-Plug 'honza/vim-snippets'
-Plug 'MarcWeber/vim-addon-mw-utils'
-Plug 'tomtom/tlib_vim'
-Plug 'garbas/vim-snipmate'
-Plug 'ervandew/supertab'
 Plug 'morhetz/gruvbox'
+Plug 'ntpeters/vim-better-whitespace'
+Plug 'pearofducks/ansible-vim', { 'do': 'cd ./UltiSnips; python2 generate.py' }
+Plug 'rking/ag.vim'
+Plug 'tomtom/tlib_vim'
+Plug 'tpope/vim-fugitive'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'vim-scripts/gnupg.vim'
 call plug#end()
 
 syntax on
@@ -71,6 +72,10 @@ let g:ansible_name_highlight = 'd'
 let g:ansible_extra_keywords_highlight = 1
 let g:ansible_normal_keywords_highlight = 'Statement'
 let g:ansible_with_keywords_highlight = 'Special'
+
+" vim-airline settings
+let g:airline_theme = 'light'
+let g:airline#extensions#tabline#enabled = 1
 
 nnoremap <Leader>f :FZF<CR>
 nnoremap <Leader><left> <C-W><C-H>
