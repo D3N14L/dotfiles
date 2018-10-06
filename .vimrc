@@ -5,6 +5,7 @@ Plug 'bling/vim-airline'
 Plug 'cz8s/password-store'
 Plug 'davidhalter/jedi-vim'
 Plug 'ervandew/supertab'
+Plug 'fatih/vim-go'
 Plug 'garbas/vim-snipmate'
 Plug 'honza/vim-snippets'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
