@@ -2,6 +2,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'airblade/vim-gitgutter'
 Plug 'bling/vim-airline'
+Plug 'chase/vim-ansible-yaml'
 Plug 'cz8s/password-store'
 Plug 'davidhalter/jedi-vim'
 Plug 'ervandew/supertab'
@@ -13,7 +14,6 @@ Plug 'kien/ctrlp.vim'
 Plug 'majutsushi/tagbar'
 Plug 'morhetz/gruvbox'
 Plug 'ntpeters/vim-better-whitespace'
-Plug 'pearofducks/ansible-vim', { 'do': 'cd ./UltiSnips; python2 generate.py' }
 Plug 'rking/ag.vim'
 Plug 'tomtom/tlib_vim'
 Plug 'tpope/vim-fugitive'
@@ -92,3 +92,4 @@ vnoremap / /\v
 
 nmap <Leader>t :TagbarToggle<CR>
 let g:tagbar_type_ansible = { 'ctagstype' : 'ansible', 'kinds' : [ 't:tasks' ], 'sort' : 0 }
+autocmd FileType * nested :call tagbar#autoopen(0)
