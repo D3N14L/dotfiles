@@ -54,6 +54,7 @@ set listchars=tab:>-,trail:.,nbsp:~
 set wrap linebreak list
 
 set cursorline
+set cursorcolumn
 set background=dark
 
 set backupdir=~/.vim/backup/
@@ -88,4 +89,5 @@ nnoremap <c-b> :CtrlPBuffer<CR>
 nnoremap / /\v
 vnoremap / /\v
 
-nmap <F8> :TagbarToggle<CR>
+nmap <Leader>t :TagbarToggle<CR>
+let g:tagbar_type_ansible = { 'ctagstype' : 'ansible', 'kinds' : [ 't:tasks' ], 'sort' : 0 }
