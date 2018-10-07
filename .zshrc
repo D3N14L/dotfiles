@@ -15,6 +15,11 @@ export LANGUAGE="en_US.UTF-8"
 export LANG="en_US.UTF-8"
 export LC_MESSAGES="en_US.UTF-8"
 
+export EDITOR=vim
+
+export GOPATH=$HOME/.go
+
+
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle changyuheng/fz
@@ -28,10 +33,14 @@ antigen theme blinks
 antigen apply
 unset RPROMPT # Remove history counter
 
-export EDITOR=vim
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [ -f ~/.aliases ] && source ~/.aliases
 [ -f ~/.private ] && source ~/.private
+if [ -d ~/.aliases.d ] ; then
+  for f in $(ls $HOME/.aliases.d/); do
+    source $HOME/.aliases.d/$f
+  done
+fi
 [ -f /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc ] && source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
 [ -f /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc ] && source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc
 if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
