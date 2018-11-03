@@ -13,6 +13,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'kien/ctrlp.vim'
 Plug 'majutsushi/tagbar'
 Plug 'morhetz/gruvbox'
+Plug 'scrooloose/nerdtree'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'rking/ag.vim'
 Plug 'tomtom/tlib_vim'
@@ -90,6 +91,6 @@ nnoremap <c-b> :CtrlPBuffer<CR>
 nnoremap / /\v
 vnoremap / /\v
 
-nmap <Leader>t :TagbarToggle<CR>
+nmap <Leader>t :NERDTreeFocus<CR>
 let g:tagbar_type_ansible = { 'ctagstype' : 'ansible', 'kinds' : [ 't:tasks' ], 'sort' : 0 }
 autocmd FileType * nested :call tagbar#autoopen(0)
