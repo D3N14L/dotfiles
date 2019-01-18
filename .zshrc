@@ -36,6 +36,7 @@ unset RPROMPT # Remove history counter
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [ -f ~/.aliases ] && source ~/.aliases
 [ -f ~/.private ] && source ~/.private
+[ -d ~/bin ] && export PATH=$PATH:$HOME/bin
 if [ -d ~/.aliases.d ] ; then
   for f in $(ls $HOME/.aliases.d/); do
     source $HOME/.aliases.d/$f
