@@ -88,6 +88,8 @@ nnoremap <Leader><right> <C-W><C-L>
 
 nnoremap <c-b> :CtrlPBuffer<CR>
 
+nnoremap <silent> <Leader><Space> :nohlsearch<CR>
+
 nnoremap / /\v
 vnoremap / /\v
 
