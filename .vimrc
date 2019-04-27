@@ -20,6 +20,7 @@ Plug 'tomtom/tlib_vim'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-scripts/gnupg.vim'
+Plug 'kshenoy/vim-signature'
 call plug#end()
 
 syntax on
