@@ -1,3 +1,3 @@
-alias assemble_ssh_config='cat ~/.ssh/config.d/*.conf > ~/.ssh/config'
 alias dots='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias cmd2png='convert -trim -background black -fill white -font AndaleMono -pointsize 14 -border 10 -bordercolor black text:- '
+alias date_time_str='date +%Y-%m%dT%H-%M-%S'
