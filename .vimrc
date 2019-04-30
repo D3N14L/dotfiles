@@ -42,6 +42,7 @@ set visualbell
 set ttyfast
 set backspace=indent,eol,start
 set laststatus=2
+set splitbelow
 if version >= 703
   set relativenumber
 endif
@@ -82,10 +83,10 @@ let g:airline_theme = 'light'
 let g:airline#extensions#tabline#enabled = 1
 
 nnoremap <Leader>f :FZF<CR>
-nnoremap <Leader><left> <C-W><C-H>
-nnoremap <Leader><down> <C-W><C-J>
-nnoremap <Leader><up> <C-W><C-K>
-nnoremap <Leader><right> <C-W><C-L>
+"nnoremap <Leader><left> <C-W><C-H>
+"nnoremap <Leader><down> <C-W><C-J>
+"nnoremap <Leader><up> <C-W><C-K>
+"nnoremap <Leader><right> <C-W><C-L>
 
 nnoremap <c-b> :CtrlPBuffer<CR>
 
