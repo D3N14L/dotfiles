@@ -88,6 +88,9 @@ let g:airline#extensions#tabline#enabled = 1
 " vimwiki settings
 let g:vimwiki_list = [{'path': '~/.vimwiki/', 'syntax': 'markdown', 'ext': '.md'}]
 
+" snipMate settings
+let g:snipMate = { 'snippet_version' : 1 }
+
 nnoremap <Leader>f :FZF<CR>
 nnoremap <Leader><left> <C-W><C-H>
 "nnoremap <Leader><down> <C-W><C-J>
@@ -110,3 +113,8 @@ vnoremap / /\v
 nmap <Leader>t :NERDTreeFocus<CR>
 let g:tagbar_type_ansible = { 'ctagstype' : 'ansible', 'kinds' : [ 't:tasks' ], 'sort' : 0 }
 autocmd FileType * nested :call tagbar#autoopen(0)
+
+" NERDTree
+autocmd VimEnter * NERDTree
+autocmd BufEnter * NERDTreeMirror
+autocmd VimEnter * wincmd w
