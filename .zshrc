@@ -55,5 +55,6 @@ export PATH="$PATH:${KREW_ROOT:-$HOME/.krew}/bin"
 
 # AWS shared credentials loading
 export AWS_SDK_LOAD_CONFIG=1
+export AWS_PAGER=""
 
 eval "$(starship init zsh)"

@@ -1,27 +1,24 @@
 call plug#begin('~/.vim/plugged')
-Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'airblade/vim-gitgutter'
 Plug 'bling/vim-airline'
 Plug 'chase/vim-ansible-yaml'
-Plug 'cz8s/password-store'
 Plug 'davidhalter/jedi-vim'
 Plug 'ervandew/supertab'
 Plug 'fatih/vim-go'
-Plug 'garbas/vim-snipmate'
+Plug 'hashivim/vim-terraform'
 Plug 'honza/vim-snippets'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'kien/ctrlp.vim'
-Plug 'majutsushi/tagbar'
+Plug 'kshenoy/vim-signature'
 Plug 'morhetz/gruvbox'
-Plug 'scrooloose/nerdtree'
-Plug 'ntpeters/vim-better-whitespace'
 Plug 'rking/ag.vim'
-Plug 'tomtom/tlib_vim'
+Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-scripts/gnupg.vim'
-Plug 'kshenoy/vim-signature'
 Plug 'vimwiki/vimwiki'
+
+
 call plug#end()
 
 syntax on
@@ -69,7 +66,6 @@ set undodir=~/.vim/undo/
 let g:GPGDebugLog="gpg.vim.log"
 let g:GPGDebugLevel=5
 let g:GPGDefaultRecipients=["daniel.marks@mailbox.org"]
-"let g:tagbar_type_ansible = {'ctagstype' : 'ansible', 'kinds' : ['t:tasks'], 'sort' : 0}
 
 let mapleader = ","
 " NERDTree
@@ -110,11 +106,19 @@ nnoremap <silent> <Leader><Space> :nohlsearch<CR>
 nnoremap / /\v
 vnoremap / /\v
 
+" NERDTree
 nmap <Leader>t :NERDTreeFocus<CR>
+autocmd VimEnter * NERDTree
+autocmd BufEnter * NERDTreeMirror
+autocmd VimEnter * wincmd w
+
 let g:tagbar_type_ansible = { 'ctagstype' : 'ansible', 'kinds' : [ 't:tasks' ], 'sort' : 0 }
-autocmd FileType * nested :call tagbar#autoopen(0)
 
 " NERDTree
 autocmd VimEnter * NERDTree
 autocmd BufEnter * NERDTreeMirror
 autocmd VimEnter * wincmd w
+
+let g:terraform_align=1
+let g:terraform_fold_sections=1
+let g:terraform_fmt_on_save=1
