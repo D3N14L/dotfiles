@@ -108,16 +108,11 @@ vnoremap / /\v
 
 " NERDTree
 nmap <Leader>t :NERDTreeFocus<CR>
-autocmd VimEnter * NERDTree
-autocmd BufEnter * NERDTreeMirror
-autocmd VimEnter * wincmd w
+"autocmd VimEnter * NERDTree
+"autocmd BufEnter * NERDTreeMirror
+"autocmd VimEnter * wincmd w
 
 let g:tagbar_type_ansible = { 'ctagstype' : 'ansible', 'kinds' : [ 't:tasks' ], 'sort' : 0 }
-
-" NERDTree
-autocmd VimEnter * NERDTree
-autocmd BufEnter * NERDTreeMirror
-autocmd VimEnter * wincmd w
 
 let g:terraform_align=1
 let g:terraform_fold_sections=1
