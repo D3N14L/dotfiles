@@ -1,24 +1,24 @@
 call plug#begin('~/.vim/plugged')
+"Plug 'chase/vim-ansible-yaml'
+"Plug 'ervandew/supertab'
+"Plug 'fatih/vim-go'
+"Plug 'honza/vim-snippets'
+"Plug 'juliosueiras/vim-terraform-completion'
+"Plug 'junegunn/fzf.vim'
+"Plug 'scrooloose/nerdtree'
+"Plug 'vim-scripts/gnupg.vim'
+"Plug 'vimwiki/vimwiki'
 Plug 'airblade/vim-gitgutter'
 Plug 'bling/vim-airline'
-Plug 'chase/vim-ansible-yaml'
-Plug 'davidhalter/jedi-vim'
-Plug 'ervandew/supertab'
-Plug 'fatih/vim-go'
 Plug 'hashivim/vim-terraform'
-Plug 'honza/vim-snippets'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': { -> fzf#install() } }
 Plug 'kien/ctrlp.vim'
 Plug 'kshenoy/vim-signature'
 Plug 'morhetz/gruvbox'
 Plug 'rking/ag.vim'
-Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'vim-scripts/gnupg.vim'
-Plug 'vimwiki/vimwiki'
-
-
+Plug 'vim-syntastic/syntastic'
 call plug#end()
 
 syntax on
@@ -115,5 +115,32 @@ nmap <Leader>t :NERDTreeFocus<CR>
 let g:tagbar_type_ansible = { 'ctagstype' : 'ansible', 'kinds' : [ 't:tasks' ], 'sort' : 0 }
 
 let g:terraform_align=1
-let g:terraform_fold_sections=1
+let g:terraform_fold_sections=0
 let g:terraform_fmt_on_save=1
+
+
+" Syntastic Config
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+" (Optional)Remove Info(Preview) window
+set completeopt-=preview
+
+" (Optional)Hide Info(Preview) window after completions
+autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
+autocmd InsertLeave * if pumvisible() == 0|pclose|endif
+
+" (Optional) Enable terraform plan to be include in filter
+let g:syntastic_terraform_tffilter_plan = 1
+
+" (Optional) Default: 0, enable(1)/disable(0) plugin's keymapping
+let g:terraform_completion_keys = 1
+
+" (Optional) Default: 1, enable(1)/disable(0) terraform module registry completion
+let g:terraform_registry_module_completion = 0
