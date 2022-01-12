@@ -14,7 +14,7 @@ antigen use oh-my-zsh
 #antigen theme blinks
 
 # plugins from default library (oh-my-zsh)
-plugins=(aws git docker fasd kubectl pass vi-mode z)
+plugins=(aws git docker fasd fzf kubectl pass vi-mode z)
 for plugin in $plugins
 do
   antigen bundle $plugin
@@ -40,6 +40,7 @@ unset RPROMPT # Remove history counter
 [ -f ~/.aliases ] && source ~/.aliases
 [ -f ~/.private ] && source ~/.private
 [ -d ~/bin ] && export PATH=$PATH:$HOME/bin
+[ -d /opt/homebrew/bin ] && export PATH=$PATH:/opt/homebrew/bin
 if [ -d ~/.aliases.d ] ; then
   for f in $(ls $HOME/.aliases.d/); do
     source $HOME/.aliases.d/$f
@@ -56,4 +57,8 @@ export PATH="$PATH:${KREW_ROOT:-$HOME/.krew}/bin"
 export AWS_SDK_LOAD_CONFIG=1
 export AWS_PAGER=""
 
+source <(kubectl completion zsh)
+
+eval "$(pyenv init -)"
+export WORKON_HOME=~/.virtualenv
 eval "$(starship init zsh)"

@@ -10,6 +10,7 @@ call plug#begin('~/.vim/plugged')
 "Plug 'vimwiki/vimwiki'
 Plug 'airblade/vim-gitgutter'
 Plug 'bling/vim-airline'
+Plug 'editorconfig/editorconfig-vim'
 Plug 'hashivim/vim-terraform'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': { -> fzf#install() } }
 Plug 'kien/ctrlp.vim'
